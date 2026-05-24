@@ -49,6 +49,15 @@ Skill content changes take effect immediately for local path installs. Remote us
 | `daily-tasks` | Suggests top 3 priority tasks to work on today |
 | `list-of-pending-articles` | Lists pending articles from the cowork project |
 
+## Git Workflow
+
+**Always** push changes to a feature branch and open a PR against `main`. Never push directly to `main`.
+
+1. Create a feature branch: `git checkout -b <descriptive-branch-name>`
+2. Commit changes on the branch
+3. Push: `git push -u origin <branch-name>`
+4. Open a PR: `gh pr create --base main`
+
 ## Key Conventions
 
 - `second-brain-ingest` operates on a separate vault at `/home/firas/private-projects/claude/my-second-brain` — never modify `raw-sources/` or `my-notes/` there, only the `wiki/` layer.

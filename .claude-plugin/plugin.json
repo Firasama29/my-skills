@@ -1,0 +1,19 @@
+{
+  "name": "my-skills",
+  "description": "Personal workflow skills covering productivity, content creation, and knowledge management",
+  "version": "1.0.0",
+  "author": {
+    "name": "Firas Ama",
+    "email": "ferasama@gmail.com"
+  },
+  "homepage": "https://github.com/Firasama29/my-skills",
+  "repository": "https://github.com/Firasama29/my-skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "productivity",
+    "content",
+    "workflows",
+    "knowledge-management"
+  ]
+}

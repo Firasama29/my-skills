@@ -23,7 +23,27 @@ Do NOT drift into work tasks (Mindteck deliverables), personal life, finance, or
 
 ---
 
+## Priorities Log
+
+Stored at: `/home/firas/.claude/plugins/data/weekly-review/priorities-log.md`
+
+This file persists top 3 priorities across sessions. Create the file and any missing parent directories on first use if they don't exist.
+
+---
+
 ## How to Run the Review
+
+### Step 0 — Load Last Week's Priorities
+
+Before asking for the brain dump, read `/home/firas/.claude/plugins/data/weekly-review/priorities-log.md`.
+
+If the file exists and has entries, open with:
+
+> "Last week you committed to: [1], [2], [3]. Let's use that as our starting point — go ahead and give me a brain dump of the week."
+
+If the file is empty or doesn't exist, skip this and open normally.
+
+---
 
 ### Step 1 — Receive the Brain Dump
 
@@ -65,7 +85,22 @@ Once the brain dump arrives, process it into the following sections. **Do not ju
 
 ---
 
-### Step 3 — Close with One Coaching Question
+### Step 3 — Save This Week's Priorities
+
+After the user confirms the Top 3 Priorities for Next Week, append to `/home/firas/.claude/plugins/data/weekly-review/priorities-log.md`:
+
+```
+## [YYYY-MM-DD]
+1. [priority 1]
+2. [priority 2]
+3. [priority 3]
+```
+
+Create the file and any missing parent directories if they don't exist. Most recent entry goes at the top.
+
+---
+
+### Step 4 — Close with One Coaching Question
 
 End every review with a single open question that invites reflection beyond tasks. Rotate from the list below or generate a contextually relevant one:
 

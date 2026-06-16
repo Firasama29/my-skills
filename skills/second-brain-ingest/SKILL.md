@@ -35,6 +35,20 @@ Log lives at `wiki/log.md`.
 
 ---
 
+## Gotchas
+
+- **Log parsing is fuzzy, not exact.** The log uses prose, not a filename list. A file titled "HashMap Deep Dive" in the log may correspond to `hashmap-internals.md` in raw-sources — treat close title matches as already processed rather than risk duplicating.
+
+- **Ambiguous category files.** A file covering both Spring Boot and JPA goes to `spring-boot`, not `java`. When in genuine doubt, pick the category whose sub-index has the closest existing page — that's where the merge will land anyway.
+
+- **Orphan check false negatives.** A `[[wikilink]]` with a path prefix like `[[raw-sources/foo]]` does NOT satisfy the orphan check — only bare `[[foo]]` entries in index files count. Do not manually eyeball this; always run the script.
+
+- **"Not ingested" files still need index entries.** Rejected files (low-signal, duplicates) must get a `[[stem]]` entry in the appropriate category index's raw-sources section, or they will show as orphans on the next run.
+
+- **Append-only for wiki pages.** Never restructure or reorder existing content when merging — only append a new demarcated section at the bottom. Reorganizing existing content causes silent content loss that won't be caught by the orphan check.
+
+---
+
 ## Ingestion Steps
 
 ### Step 1 — Parse `wiki/log.md` to find already-processed files
